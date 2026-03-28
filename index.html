@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>You're In — Next Steps | Rafi's World</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://fast.wistia.com/embed/medias/4o8v4wpmhm.jsonp" async></script>
+<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "u7qcnghg1s");
+</script>
+<style>
+:root {
+  --bg: #0C0A09;
+  --surface: #1C1917;
+  --surface2: #292524;
+  --surface3: #3B3835;
+  --amber: #F59E0B;
+  --amber-dim: #92400E;
+  --amber-glow: rgba(245, 158, 11, 0.12);
+  --emerald: #34D399;
+  --rose: #FB7185;
+  --cyan: #22D3EE;
+  --text: #F5F5F4;
+  --text-dim: #A8A29E;
+  --text-muted: #78716C;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+/* ============================================
+   CONFIRMATION HEADER
+   ============================================ */
+.confirm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(52, 211, 153, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: var(--emerald);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.page-header h1 {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.page-header h1 em { color: var(--amber); font-style: italic; }
+
+.page-header .sub {
+  font-size: 17px;
+  color: var(--text-dim);
+  max-width: 540px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+
+.email-notice {
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 14px;
+  color: var(--text-dim);
+  display: inline-block;
+}
+.email-notice strong { color: var(--amber); }
+
+/* ============================================
+   VSL — Maciek: post-purchase VSL to prime
+   for implementation call / upsell
+   ============================================ */
+.vsl-section {
+  margin: 48px 0;
+}
+
+.vsl-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 14px;
+}
+.vsl-label::before {
+  content: '';
+  width: 16px;
+  height: 2px;
+  background: var(--amber);
+}
+
+.vsl-wrapper {
+  background: var(--surface);
+  border: 2px solid var(--amber);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px var(--amber-glow);
+}
+
+.wistia_responsive_padding { padding: 56.25% 0 0 0; position: relative; }
+.wistia_responsive_wrapper { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
+
+/* ============================================
+   WHAT YOU JUST UNLOCKED — Maciek: reinforce
+   purchase, quick win, get them consuming
+   ============================================ */
+.unlocked-section {
+  margin: 48px 0;
+}
+.unlocked-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.unlocked-title em { color: var(--amber); font-style: italic; }
+
+.unlocked-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.unlocked-card {
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: border-color 0.3s;
+}
+.unlocked-card:hover { border-color: var(--amber); }
+.unlocked-card .u-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.unlocked-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.unlocked-card p {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+/* ============================================
+   QUICK START — Maciek: get them to consume
+   the product ASAP (primes for ascension)
+   ============================================ */
+.quickstart-section {
+  margin: 48px 0;
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: 16px;
+  padding: 32px 28px;
+}
+.quickstart-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.quickstart-header .qs-icon {
+  font-size: 28px;
+}
+.quickstart-header h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px;
+}
+.quickstart-header h3 em { color: var(--amber); font-style: italic; }
+
+.qs-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--surface2);
+}
+.qs-step:last-child { border: none; }
+
+.qs-num {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--amber);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.qs-text h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.qs-text p {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.qs-text .qs-time {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--emerald);
+}
+
+/* ============================================
+   STEPS — Book the implementation call
+   ============================================ */
+.steps-section {
+  margin: 48px 0;
+}
+
+.steps-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.steps-title em { color: var(--amber); font-style: italic; }
+
+.step {
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: border-color 0.3s;
+}
+.step:hover { border-color: var(--amber); }
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  background: var(--amber);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.step-text h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.step-text p {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+.cta-section {
+  margin: 48px 0 32px;
+  text-align: center;
+}
+
+.btn-book {
+  display: block;
+  width: 100%;
+  background: var(--amber);
+  color: var(--bg);
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.btn-book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.35);
+}
+.btn-book::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  animation: shimmer 3s infinite;
+}
+@keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
+
+.cta-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.cta-note span { color: var(--emerald); }
+
+/* ============================================
+   THE 60/40 TEASER — Maciek: seed the upsell
+   naturally within the product context
+   ============================================ */
+.upsell-tease {
+  margin: 48px 0;
+  background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(34,211,238,0.06));
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.upsell-tease::after {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, var(--amber-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.upsell-tease .tease-badge {
+  display: inline-block;
+  background: rgba(34, 211, 238, 0.15);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.upsell-tease h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+.upsell-tease h3 em { color: var(--amber); font-style: italic; }
+
+.upsell-tease p {
+  font-size: 15px;
+  color: var(--text-dim);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+.upsell-tease .tease-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   URGENCY / REMINDER
+   ============================================ */
+.urgency-box {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  margin-top: 32px;
+}
+.urgency-box p {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.urgency-box strong { color: var(--amber); }
+
+/* ============================================
+   COMMUNITY REDIRECT — Maciek: funnel them
+   into WhatsApp/Skool for ongoing priming
+   ============================================ */
+.community-section {
+  margin: 48px 0;
+  text-align: center;
+}
+.community-section h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.community-section h3 em { color: var(--amber); font-style: italic; }
+.community-section .comm-sub {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+}
+
+.comm-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.comm-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s;
+  min-height: 48px;
+}
+.comm-link:hover {
+  border-color: var(--amber);
+  transform: translateY(-2px);
+}
+.comm-link .cl-icon { font-size: 20px; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 12px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--surface2);
+  margin-top: 48px;
+}
+
+/* ============================================
+   MOBILE — 768px and below
+   ============================================ */
+@media (max-width: 768px) {
+  .page { padding: 28px 16px 60px; }
+
+  .page-header { margin-bottom: 36px; }
+  .page-header h1 { font-size: 26px; }
+  .page-header .sub { font-size: 15px; margin-bottom: 18px; }
+  .confirm-badge { font-size: 11px; padding: 6px 14px; }
+  .email-notice { font-size: 13px; padding: 12px 14px; }
+
+  .vsl-section { margin: 32px 0; }
+  .vsl-wrapper { border-radius: 12px; }
+  .vsl-label { font-size: 11px; letter-spacing: 1.5px; }
+
+  .unlocked-section { margin: 32px 0; }
+  .unlocked-title { font-size: 20px; margin-bottom: 16px; }
+  .unlocked-grid { grid-template-columns: 1fr; gap: 10px; }
+  .unlocked-card { padding: 16px; gap: 10px; border-radius: 10px; }
+  .unlocked-card .u-icon { font-size: 22px; }
+  .unlocked-card h4 { font-size: 13px; }
+  .unlocked-card p { font-size: 12px; }
+
+  .quickstart-section { margin: 32px 0; padding: 24px 18px; border-radius: 12px; }
+  .quickstart-header .qs-icon { font-size: 24px; }
+  .quickstart-header h3 { font-size: 19px; }
+  .qs-step { padding: 12px 0; gap: 12px; }
+  .qs-num { width: 26px; height: 26px; min-width: 26px; font-size: 12px; }
+  .qs-text h4 { font-size: 13px; }
+  .qs-text p { font-size: 12px; }
+
+  .steps-section { margin: 32px 0; }
+  .steps-title { font-size: 20px; margin-bottom: 18px; }
+  .step { padding: 16px 16px; gap: 12px; border-radius: 10px; margin-bottom: 10px; }
+  .step-num { width: 28px; height: 28px; min-width: 28px; font-size: 13px; }
+  .step-text h4 { font-size: 14px; }
+  .step-text p { font-size: 13px; }
+
+  .cta-section { margin: 32px 0 24px; }
+  .btn-book { padding: 18px; font-size: 15px; min-height: 56px; border-radius: 10px; }
+  .cta-note { font-size: 12px; }
+
+  .upsell-tease { padding: 24px 18px; border-radius: 12px; margin: 32px 0; }
+  .upsell-tease h3 { font-size: 19px; }
+  .upsell-tease p { font-size: 14px; }
+  .upsell-tease .tease-note { font-size: 12px; }
+
+  .urgency-box { padding: 16px 16px; border-radius: 10px; margin-top: 24px; }
+  .urgency-box p { font-size: 13px; }
+
+  .community-section { margin: 32px 0; }
+  .community-section h3 { font-size: 19px; }
+  .community-section .comm-sub { font-size: 13px; margin-bottom: 16px; }
+  .comm-links { flex-direction: column; gap: 10px; }
+  .comm-link { justify-content: center; padding: 14px 20px; font-size: 13px; border-radius: 10px; }
+
+  .footer { padding: 24px 16px; font-size: 11px; margin-top: 36px; }
+}
+
+@media (max-width: 390px) {
+  .page-header h1 { font-size: 23px; }
+  .btn-book { font-size: 14px; }
+  .quickstart-header h3 { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ===== CONFIRMATION HEADER ===== -->
+  <div class="page-header">
+    <div class="confirm-badge">✓ Payment Confirmed</div>
+    <h1>You're In. Now <em>Use It.</em></h1>
+    <p class="sub">You just joined the small percentage of entrepreneurs who plan with timing data instead of guesswork. Your Playbook is ready — but there's one step that will 10x the value of what you just bought.</p>
+    <div class="email-notice">
+      📩 Your Playbook PDF + receipt has been sent to <strong>your email</strong>. Check your inbox (and spam folder).
+    </div>
+  </div>
+
+  <!-- ===== VSL — Maciek: post-purchase VSL primes for implementation call ===== -->
+  <div class="vsl-section">
+    <div class="vsl-label">⚡ Watch This Before You Open the Playbook</div>
+    <div class="vsl-wrapper">
+      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+        <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+          <div class="wistia_embed wistia_async_4o8v4wpmhm videoFoam=true" style="height:100%;position:relative;width:100%">
+            <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+              <img src="https://fast.wistia.com/embed/medias/4o8v4wpmhm/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WHAT YOU UNLOCKED — reinforce the purchase decision ===== -->
+  <div class="unlocked-section">
+    <h2 class="unlocked-title">What You Just <em>Unlocked</em></h2>
+    <div class="unlocked-grid">
+      <div class="unlocked-card">
+        <div class="u-icon">📊</div>
+        <div>
+          <h4>365 Daily Entries</h4>
+          <p>Every day of 2026 decoded with energy type, action directive, and avoidance warning.</p>
+        </div>
+      </div>
+      <div class="unlocked-card">
+        <div class="u-icon">🟢</div>
+        <div>
+          <h4>High-Output Map</h4>
+          <p>Know which days to push hard and which to pull back — mapped for the entire year.</p>
+        </div>
+      </div>
+      <div class="unlocked-card">
+        <div class="u-icon">🔄</div>
+        <div>
+          <h4>9-Day Cycle Framework</h4>
+          <p>The underlying pattern that lets you predict the rhythm of any month.</p>
+        </div>
+      </div>
+      <div class="unlocked-card">
+        <div class="u-icon">🎁</div>
+        <div>
+          <h4>Free Implementation Call</h4>
+          <p>A 1-on-1 call with Rafi to layer the calendar over your specific goals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== QUICK START — Maciek: get them consuming ASAP ===== -->
+  <div class="quickstart-section">
+    <div class="quickstart-header">
+      <div class="qs-icon">🚀</div>
+      <h3>Your <em>Quick Start</em> (Do This Now)</h3>
+    </div>
+
+    <div class="qs-step">
+      <div class="qs-num">1</div>
+      <div class="qs-text">
+        <h4>Open the Playbook to Today's Date</h4>
+        <p>Check today's energy. Read the action directive and avoidance warning. This is your first taste of how different planning feels when you have timing data.</p>
+        <span class="qs-time">⏱ 2 minutes</span>
+      </div>
+    </div>
+
+    <div class="qs-step">
+      <div class="qs-num">2</div>
+      <div class="qs-text">
+        <h4>Audit Your Next 7 Days</h4>
+        <p>Mark which days are High-Output (1, 8, 11 Energy) and which are Recovery (7, 6 Energy). Move your most important tasks to the right days.</p>
+        <span class="qs-time">⏱ 5 minutes</span>
+      </div>
+    </div>
+
+    <div class="qs-step">
+      <div class="qs-num">3</div>
+      <div class="qs-text">
+        <h4>Read the 60/40 Rule Section</h4>
+        <p>This explains why the calendar is 60% of the picture — and what the other 40% is. This is the most important section for understanding how deep this system goes.</p>
+        <span class="qs-time">⏱ 3 minutes</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BOOK IMPLEMENTATION CALL — Maciek: frame as onboarding, seeds upsell ===== -->
+  <div class="steps-section">
+    <h2 class="steps-title">Now Book Your Free <em>Implementation Call</em></h2>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Book Your Slot Below</h4>
+        <p>This is a free, no-pressure call included with your Playbook purchase. I'll personally walk you through how to layer the calendar over your specific business goals — so you get maximum value from what you just bought.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Go Through the Playbook First</h4>
+        <p>Before we speak, I want you to use the calendar for at least <strong style="color:var(--text)">3-5 days</strong>. The call is 10x more valuable when you've already experienced the timing system in action and have real questions.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Come With Your Top 3 Business Goals</h4>
+        <p>On the call, I'll show you how to use the Playbook to time your biggest decisions — launches, hires, pitches, partnerships. The more specific your goals, the more precise my guidance.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta-section">
+    <a href="YOUR_CALENDLY_LINK_HERE" class="btn-book" target="_blank">
+      Book My Free Implementation Call →
+    </a>
+    <p class="cta-note"><span>🛡</span> Limited spots per week. Book now to secure your date — first come, first served.</p>
+  </div>
+
+  <!-- ===== 60/40 UPSELL TEASE — Maciek: naturally seed the higher-ticket reading ===== -->
+  <div class="upsell-tease">
+    <div class="tease-badge">The Other 40%</div>
+    <h3>The Calendar Shows <em>Universal</em> Energy. Your Chart Shows <em>Yours.</em></h3>
+    <p>The Playbook gives you the universal timing layer — what's happening for everyone. But the real edge comes when you layer your Personal Life Path on top of it. That's what turns a good plan into an unfair advantage.</p>
+    <p class="tease-note">On your implementation call, I'll show you exactly where the 60% and the 40% overlap — and what it means for your specific situation.</p>
+  </div>
+
+  <!-- ===== URGENCY ===== -->
+  <div class="urgency-box">
+    <p><strong>Don't let this sit in your inbox.</strong> The entrepreneurs who get the most from this Playbook are the ones who open it the day they buy it. Check today's date. Read the entry. Start using it immediately — the timing data is only useful if you act on it.</p>
+  </div>
+
+  <!-- ===== COMMUNITY — Maciek: funnel into WhatsApp for ongoing priming ===== -->
+  <div class="community-section">
+    <h3>Join the <em>Inner Circle</em></h3>
+    <p class="comm-sub">Connect with other entrepreneurs using the Playbook. Get exclusive content, live sessions, and direct access to Rafi.</p>
+    <div class="comm-links">
+      <a href="YOUR_WHATSAPP_LINK" class="comm-link" target="_blank">
+        <span class="cl-icon">💬</span> Join the WhatsApp Group
+      </a>
+      <a href="YOUR_YOUTUBE_LINK" class="comm-link" target="_blank">
+        <span class="cl-icon">▶️</span> Subscribe on YouTube
+      </a>
+      <a href="YOUR_INSTAGRAM_LINK" class="comm-link" target="_blank">
+        <span class="cl-icon">📸</span> Follow on Instagram
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">&copy; 2026 Rafi's World. All rights reserved.</footer>
+
+</body>
+</html>
