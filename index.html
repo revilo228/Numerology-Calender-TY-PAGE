@@ -5,8 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>You're In — Next Steps | Rafi's World</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://fast.wistia.com/embed/medias/4o8v4wpmhm.jsonp" async></script>
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
+<!-- New Wistia Player -->
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/uzf9p7lkq8.js" async type="module"></script>
+<style>wistia-player[media-id='uzf9p7lkq8']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/uzf9p7lkq8/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style>
+
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "u7qcnghg1s");
 </script>
@@ -99,8 +103,7 @@ body {
 .email-notice strong { color: var(--amber); }
 
 /* ============================================
-   VSL — Maciek: post-purchase VSL to prime
-   for implementation call / upsell
+   VSL
    ============================================ */
 .vsl-section {
   margin: 48px 0;
@@ -132,12 +135,8 @@ body {
   box-shadow: 0 0 40px var(--amber-glow);
 }
 
-.wistia_responsive_padding { padding: 56.25% 0 0 0; position: relative; }
-.wistia_responsive_wrapper { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
-
 /* ============================================
-   WHAT YOU JUST UNLOCKED — Maciek: reinforce
-   purchase, quick win, get them consuming
+   WHAT YOU JUST UNLOCKED
    ============================================ */
 .unlocked-section {
   margin: 48px 0;
@@ -184,8 +183,7 @@ body {
 }
 
 /* ============================================
-   QUICK START — Maciek: get them to consume
-   the product ASAP (primes for ascension)
+   QUICK START
    ============================================ */
 .quickstart-section {
   margin: 48px 0;
@@ -253,7 +251,7 @@ body {
 }
 
 /* ============================================
-   STEPS — Book the implementation call
+   STEPS
    ============================================ */
 .steps-section {
   margin: 48px 0;
@@ -355,8 +353,7 @@ body {
 .cta-note span { color: var(--emerald); }
 
 /* ============================================
-   THE 60/40 TEASER — Maciek: seed the upsell
-   naturally within the product context
+   THE 60/40 TEASER
    ============================================ */
 .upsell-tease {
   margin: 48px 0;
@@ -440,8 +437,7 @@ body {
 .urgency-box strong { color: var(--amber); }
 
 /* ============================================
-   COMMUNITY REDIRECT — Maciek: funnel them
-   into WhatsApp/Skool for ongoing priming
+   COMMUNITY REDIRECT
    ============================================ */
 .community-section {
   margin: 48px 0;
@@ -499,7 +495,7 @@ body {
 }
 
 /* ============================================
-   MOBILE — 768px and below
+   MOBILE
    ============================================ */
 @media (max-width: 768px) {
   .page { padding: 28px 16px 60px; }
@@ -579,23 +575,15 @@ body {
     </div>
   </div>
 
-  <!-- ===== VSL — Maciek: post-purchase VSL primes for implementation call ===== -->
+  <!-- ===== VSL ===== -->
   <div class="vsl-section">
     <div class="vsl-label">⚡ Watch This Before You Open the Playbook</div>
     <div class="vsl-wrapper">
-      <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-        <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-          <div class="wistia_embed wistia_async_4o8v4wpmhm videoFoam=true" style="height:100%;position:relative;width:100%">
-            <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-              <img src="https://fast.wistia.com/embed/medias/4o8v4wpmhm/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <wistia-player media-id="uzf9p7lkq8" aspect="1.7777777777777777"></wistia-player>
     </div>
   </div>
 
-  <!-- ===== WHAT YOU UNLOCKED — reinforce the purchase decision ===== -->
+  <!-- ===== WHAT YOU UNLOCKED ===== -->
   <div class="unlocked-section">
     <h2 class="unlocked-title">What You Just <em>Unlocked</em></h2>
     <div class="unlocked-grid">
@@ -623,14 +611,14 @@ body {
       <div class="unlocked-card">
         <div class="u-icon">🎁</div>
         <div>
-          <h4>Free Implementation Call</h4>
-          <p>A 1-on-1 call with Rafi to layer the calendar over your specific goals.</p>
+          <h4>Free Onboarding Call</h4>
+          <p>A 1-on-1 call with Rafi to get you up to speed and implement the calendar with precision.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== QUICK START — Maciek: get them consuming ASAP ===== -->
+  <!-- ===== QUICK START ===== -->
   <div class="quickstart-section">
     <div class="quickstart-header">
       <div class="qs-icon">🚀</div>
@@ -665,15 +653,15 @@ body {
     </div>
   </div>
 
-  <!-- ===== BOOK IMPLEMENTATION CALL — Maciek: frame as onboarding, seeds upsell ===== -->
+  <!-- ===== BOOK ONBOARDING CALL ===== -->
   <div class="steps-section">
-    <h2 class="steps-title">Now Book Your Free <em>Implementation Call</em></h2>
+    <h2 class="steps-title">Now Book Your Free <em>Onboarding Call</em></h2>
 
     <div class="step">
       <div class="step-num">1</div>
       <div class="step-text">
         <h4>Book Your Slot Below</h4>
-        <p>This is a free, no-pressure call included with your Playbook purchase. I'll personally walk you through how to layer the calendar over your specific business goals — so you get maximum value from what you just bought.</p>
+        <p>This is a free, no-pressure call included with your Playbook purchase. I'll personally walk you through how to implement the calendar, use the Telegram group, and get maximum value from what you just bought.</p>
       </div>
     </div>
 
@@ -697,17 +685,17 @@ body {
   <!-- ===== CTA ===== -->
   <div class="cta-section">
     <a href="https://calendly.com/rafy-/on-boarding-call" class="btn-book" target="_blank">
-      Book My Free Implementation Call →
+      Book My Free Onboarding Call →
     </a>
     <p class="cta-note"><span>🛡</span> Limited spots per week. Book now to secure your date — first come, first served.</p>
   </div>
 
-  <!-- ===== 60/40 UPSELL TEASE — Maciek: naturally seed the higher-ticket reading ===== -->
+  <!-- ===== 60/40 UPSELL TEASE ===== -->
   <div class="upsell-tease">
     <div class="tease-badge">The Other 40%</div>
     <h3>The Calendar Shows <em>Universal</em> Energy. Your Chart Shows <em>Yours.</em></h3>
     <p>The Playbook gives you the universal timing layer — what's happening for everyone. But the real edge comes when you layer your Personal Life Path on top of it. That's what turns a good plan into an unfair advantage.</p>
-    <p class="tease-note">On your implementation call, I'll show you exactly where the 60% and the 40% overlap — and what it means for your specific situation.</p>
+    <p class="tease-note">On your onboarding call, I'll show you exactly where the 60% and the 40% overlap — and what it means for your specific situation.</p>
   </div>
 
   <!-- ===== URGENCY ===== -->
@@ -715,7 +703,7 @@ body {
     <p><strong>Don't let this sit in your inbox.</strong> The entrepreneurs who get the most from this Playbook are the ones who open it the day they buy it. Check today's date. Read the entry. Start using it immediately — the timing data is only useful if you act on it.</p>
   </div>
 
-  <!-- ===== COMMUNITY — Maciek: funnel into WhatsApp for ongoing priming ===== -->
+  <!-- ===== COMMUNITY ===== -->
   <div class="community-section">
     <h3>Join the <em>Inner Circle</em></h3>
     <p class="comm-sub">Connect with other entrepreneurs using the Playbook. Get exclusive content, live sessions, and direct access to Rafi.</p>
