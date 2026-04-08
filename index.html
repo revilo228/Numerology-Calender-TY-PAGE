@@ -48,6 +48,60 @@ body {
 }
 
 /* ============================================
+   STICKY TELEGRAM BAR
+   ============================================ */
+.sticky-telegram {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(135deg, #0C0A09 0%, #1C1917 100%);
+  border-top: 2px solid var(--cyan);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 -4px 30px rgba(0,0,0,0.6);
+}
+.sticky-telegram a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cyan);
+  color: #0C0A09;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.sticky-telegram a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(34, 211, 238, 0.35);
+}
+.sticky-telegram .sticky-text {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+.sticky-telegram .sticky-text strong {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .sticky-telegram { flex-direction: column; gap: 8px; padding: 12px 16px; }
+  .sticky-telegram a { width: 100%; justify-content: center; padding: 14px 20px; font-size: 14px; }
+  .sticky-telegram .sticky-text { text-align: center; font-size: 12px; }
+  .page { padding-bottom: 140px; }
+}
+
+/* ============================================
    CONFIRMATION HEADER
    ============================================ */
 .confirm-badge {
@@ -80,28 +134,8 @@ body {
 }
 .page-header h1 em { color: var(--amber); font-style: italic; }
 
-.page-header .sub {
-  font-size: 17px;
-  color: var(--text-dim);
-  max-width: 540px;
-  margin: 0 auto 24px;
-  line-height: 1.6;
-}
-
-.email-notice {
-  background: var(--surface);
-  border: 1px solid var(--surface2);
-  border-radius: 10px;
-  padding: 14px 20px;
-  font-size: 14px;
-  color: var(--text-dim);
-  display: inline-block;
-}
-.email-notice strong { color: var(--amber); }
-
 /* ============================================
-   VSL — Maciek: post-purchase VSL to prime
-   for implementation call / upsell
+   VSL
    ============================================ */
 .vsl-section {
   margin: 48px 0;
@@ -137,8 +171,7 @@ body {
 .wistia_responsive_wrapper { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
 
 /* ============================================
-   WHAT YOU JUST UNLOCKED — Maciek: reinforce
-   purchase, quick win, get them consuming
+   WHAT YOU JUST UNLOCKED
    ============================================ */
 .unlocked-section {
   margin: 48px 0;
@@ -207,8 +240,7 @@ body {
 }
 
 /* ============================================
-   QUICK START — Maciek: get them to consume
-   the product ASAP (primes for ascension)
+   QUICK START
    ============================================ */
 .quickstart-section {
   margin: 48px 0;
@@ -276,7 +308,7 @@ body {
 }
 
 /* ============================================
-   STEPS — Book the implementation call
+   STEPS
    ============================================ */
 .steps-section {
   margin: 48px 0;
@@ -378,8 +410,7 @@ body {
 .cta-note span { color: var(--emerald); }
 
 /* ============================================
-   THE 60/40 TEASER — Maciek: seed the upsell
-   naturally within the product context
+   THE 60/40 TEASER
    ============================================ */
 .upsell-tease {
   margin: 48px 0;
@@ -463,8 +494,7 @@ body {
 .urgency-box strong { color: var(--amber); }
 
 /* ============================================
-   COMMUNITY REDIRECT — Maciek: funnel them
-   into WhatsApp/Skool for ongoing priming
+   COMMUNITY
    ============================================ */
 .community-section {
   margin: 48px 0;
@@ -522,16 +552,14 @@ body {
 }
 
 /* ============================================
-   MOBILE — 768px and below
+   MOBILE
    ============================================ */
 @media (max-width: 768px) {
-  .page { padding: 28px 16px 60px; }
+  .page { padding: 28px 16px 140px; }
 
   .page-header { margin-bottom: 36px; }
   .page-header h1 { font-size: 26px; }
-  .page-header .sub { font-size: 15px; margin-bottom: 18px; }
   .confirm-badge { font-size: 11px; padding: 6px 14px; }
-  .email-notice { font-size: 13px; padding: 12px 14px; }
 
   .vsl-section { margin: 32px 0; }
   .vsl-wrapper { border-radius: 12px; }
@@ -596,13 +624,10 @@ body {
   <div class="page-header">
     <div class="confirm-badge">✓ Payment Confirmed</div>
     <h1>You're In. Now <em>Use It.</em></h1>
-    <p class="sub">You just joined the small percentage of entrepreneurs who plan with timing data instead of guesswork. Your Playbook is ready — but there's one step that will 10x the value of what you just bought.</p>
-    <div class="email-notice">
-      📩 Your Playbook PDF + receipt has been sent to <strong>your email</strong>. Check your inbox (and spam folder).
-    </div>
+    <a href="https://t.me/+8jsjPMdddjZhYzU0" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;background:var(--cyan);color:#0C0A09;padding:16px 60px;border-radius:10px;font-size:16px;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;transition:all 0.3s;width:100%;max-width:420px;">✈️ Join Telegram Now</a>
   </div>
 
-  <!-- ===== VSL — Maciek: post-purchase VSL primes for implementation call ===== -->
+  <!-- ===== VSL ===== -->
   <div class="vsl-section">
     <div class="vsl-label">⚡ Watch This Before You Open the Playbook</div>
     <div class="vsl-wrapper">
@@ -610,17 +635,12 @@ body {
     </div>
   </div>
 
-  <!-- ===== WHAT YOU UNLOCKED — reinforce the purchase decision ===== -->
+  <!-- ===== WHAT YOU UNLOCKED ===== -->
   <div class="unlocked-section">
     <h2 class="unlocked-title">What You Just <em>Unlocked</em></h2>
     <div class="unlocked-grid">
-      <a href="https://t.me/+8jsjPMdddjZhYzU0" class="unlocked-card unlocked-telegram" target="_blank">
-        <div class="u-icon">✈️</div>
-        <div>
-          <h4>Private Telegram Group</h4>
-          <p>Daily insights, extra context on the calendar entries, and direct access to Rafi to maximise your results.</p>
-          <span class="join-cta">Click here to join →</span>
-        </div>
+      <a href="https://calendly.com/rafy-/on-boarding-call" class="unlocked-card" target="_blank" style="background:var(--amber);border-color:var(--amber);text-decoration:none;cursor:pointer;transition:all 0.3s;text-align:center;justify-content:center;display:flex;align-items:center;gap:4px;padding:24px 20px;grid-column:1/-1;">
+        <span style="font-size:18px;font-weight:800;color:var(--bg);text-transform:uppercase;letter-spacing:0.5px;">Book your FREE CALL 🎯</span>
       </a>
       <div class="unlocked-card">
         <div class="u-icon">📊</div>
@@ -653,7 +673,7 @@ body {
     </div>
   </div>
 
-  <!-- ===== QUICK START — Maciek: get them consuming ASAP ===== -->
+  <!-- ===== QUICK START ===== -->
   <div class="quickstart-section">
     <div class="quickstart-header">
       <div class="qs-icon">🚀</div>
@@ -688,7 +708,7 @@ body {
     </div>
   </div>
 
-  <!-- ===== BOOK IMPLEMENTATION CALL — Maciek: frame as onboarding, seeds upsell ===== -->
+  <!-- ===== BOOK IMPLEMENTATION CALL ===== -->
   <div class="steps-section">
     <h2 class="steps-title">Now Book Your Free <em>Onboarding Call</em></h2>
 
@@ -720,12 +740,12 @@ body {
   <!-- ===== CTA ===== -->
   <div class="cta-section">
     <a href="https://calendly.com/rafy-/on-boarding-call" class="btn-book" target="_blank">
-      Book My Free Onboarding Call →
+      Book Your Free Onboarding Call
     </a>
     <p class="cta-note"><span>🛡</span> Limited spots per week. Book now to secure your date — first come, first served.</p>
   </div>
 
-  <!-- ===== 60/40 UPSELL TEASE — Maciek: naturally seed the higher-ticket reading ===== -->
+  <!-- ===== 60/40 UPSELL TEASE ===== -->
   <div class="upsell-tease">
     <div class="tease-badge">The Other 40%</div>
     <h3>The Calendar Shows <em>Universal</em> Energy. Your Chart Shows <em>Yours.</em></h3>
@@ -738,7 +758,7 @@ body {
     <p><strong>Don't let this sit in your inbox.</strong> The entrepreneurs who get the most from this Playbook are the ones who open it the day they buy it. Check today's date. Read the entry. Start using it immediately — the timing data is only useful if you act on it.</p>
   </div>
 
-  <!-- ===== COMMUNITY — Maciek: funnel into WhatsApp for ongoing priming ===== -->
+  <!-- ===== COMMUNITY ===== -->
   <div class="community-section">
     <h3>Join the <em>Inner Circle</em></h3>
     <p class="comm-sub">Connect with other entrepreneurs using the Playbook. Get exclusive content, live sessions, and direct access to Rafi.</p>
@@ -761,6 +781,12 @@ body {
 </div>
 
 <footer class="footer">&copy; 2026 Rafi's World. All rights reserved.</footer>
+
+<!-- ===== STICKY TELEGRAM BAR ===== -->
+<div class="sticky-telegram">
+  <span class="sticky-text"><strong>Your first step:</strong> Join the private Telegram group for daily insights</span>
+  <a href="https://t.me/+8jsjPMdddjZhYzU0" target="_blank">✈️ Join Telegram Now</a>
+</div>
 
 </body>
 </html>
